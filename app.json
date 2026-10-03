@@ -1,6 +1,9 @@
 {
   "rev": 8,
   "serverTime": 1791052613786,
+  "version":1.7,
+  "content":"我终于成功了",
+  "url":"https://jiajian.my-place.us/"
   "notice": {
     "enabled": true,
     "popup": true,
