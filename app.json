@@ -1,72 +1,48 @@
 {
-  "rev": 8,
-  "serverTime": 1791052613786,
-  "version":1.7,
-  "content":"我终于成功了",
-  "url":"https://jiajian.my-place.us/",
-  "notice": {
-    "enabled": true,
-    "popup": true,
-    "title": "公告",
-    "content": "欢迎使用小贺影院\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。",
-    "updatedAt": "2026-10-03 12:16:13"
-  },
-  "update": {
-    "enabled": false,
-    "versionCode": 24,
-    "versionName": "3.6.1",
-    "force": false,
-    "mode": "hot",
-    "url": "",
-    "sizeBytes": 0,
-    "md5": "",
-    "changelog": ""
-  },
-  "ads": {
-    "enabled": true,
-    "lines": 1,
-    "intervalMs": 3000,
-    "items": [
-      "请不要相信视频内置的任何广告",
-      "本站不存储任何视频内容",
-      "遇到问题请到「更多 → 运行日志」反馈"
-    ]
-  },
-  "splash": {
-    "mode": "builtin",
-    "url": ""
-  },
-  "lines": [
-    {
-      "id": "ff",
-      "name": "非凡",
-      "api": "",
-      "enabled": true
-    }
-  ],
-  "sources": [
-    {
-      "key": "ffzy",
-      "name": "非凡",
-      "type": "applecms",
-      "api": "https://api.ffzyapi.com/api.php/provide/vod/",
-      "enabled": true
-    }
-  ],
-  "features": {
-    "resume": true,
-    "speed": true,
-    "history": true,
-    "hotkeys": true,
-    "dark": true,
-    "favorite": true,
-    "live": true,
-    "download": true
-  },
-  "misc": {
-    "defaultLine": "ff",
-    "themeKey": "brand",
-    "downloadConvertMp4": false,
-    "liveEnabled": true
-  }
+  "说明": "小贺影院配置文件。改完点 Commit，再打开 https://purge.jsdelivr.net/gh/jiajian66/update@main/app.json 刷一下缓存，App 下次启动就生效。",
+
+  "公告": {
+    "开关": true,
+    "启动弹窗": true,
+    "标题": "公告",
+    "内容": "欢迎使用小贺影院。\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。\n遇到问题请到「更多 → 运行日志」反馈。"
+  },
+
+  "更新": {
+    "开关": false,
+    "最新版本号": 23,
+    "最新版本名": "3.8.0",
+    "强制更新": false,
+    "更新方式": "跳转",
+    "下载地址": "",
+    "安装包大小MB": 0,
+    "安装包MD5": "",
+    "更新说明": "1. 修了若干问题\n2. 启动图、公告、轮播条现在都能在这里改"
+  },
+
+  "轮播": {
+    "开关": true,
+    "显示行数": 1,
+    "切换间隔秒": 3,
+    "内容": [
+      "请不要相信视频内置的任何广告",
+      "本站不存储任何视频资源，内容均来自第三方接口",
+      "遇到问题请到「更多 → 运行日志」反馈"
+    ]
+  },
+
+  "启动图": {
+    "模式": "内置",
+    "图片地址": ""
+  },
+
+  "功能开关": {
+    "断点续播": true,
+    "播放速度": true,
+    "播放历史": true,
+    "深色模式": true,
+    "收藏": true,
+    "直播": true,
+    "下载": true
+  }
 }
