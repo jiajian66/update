@@ -1,1 +1,69 @@
-
+{
+  "rev": 8,
+  "serverTime": 1791052613786,
+  "notice": {
+    "enabled": true,
+    "popup": true,
+    "title": "公告",
+    "content": "欢迎使用小贺影院\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。",
+    "updatedAt": "2026-10-03 12:16:13"
+  },
+  "update": {
+    "enabled": false,
+    "versionCode": 24,
+    "versionName": "3.6.1",
+    "force": false,
+    "mode": "hot",
+    "url": "",
+    "sizeBytes": 0,
+    "md5": "",
+    "changelog": ""
+  },
+  "ads": {
+    "enabled": true,
+    "lines": 1,
+    "intervalMs": 3000,
+    "items": [
+      "请不要相信视频内置的任何广告",
+      "本站不存储任何视频内容",
+      "遇到问题请到「更多 → 运行日志」反馈"
+    ]
+  },
+  "splash": {
+    "mode": "builtin",
+    "url": ""
+  },
+  "lines": [
+    {
+      "id": "ff",
+      "name": "非凡",
+      "api": "",
+      "enabled": true
+    }
+  ],
+  "sources": [
+    {
+      "key": "ffzy",
+      "name": "非凡",
+      "type": "applecms",
+      "api": "https://api.ffzyapi.com/api.php/provide/vod/",
+      "enabled": true
+    }
+  ],
+  "features": {
+    "resume": true,
+    "speed": true,
+    "history": true,
+    "hotkeys": true,
+    "dark": true,
+    "favorite": true,
+    "live": true,
+    "download": true
+  },
+  "misc": {
+    "defaultLine": "ff",
+    "themeKey": "brand",
+    "downloadConvertMp4": false,
+    "liveEnabled": true
+  }
+}
