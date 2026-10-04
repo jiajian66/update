@@ -3,19 +3,19 @@
   "notice": {
     "enabled": true,
     "popup": true,
-    "title": "公告测试",
-    "content": "测试欢迎使用小贺影院。\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。\n遇到问题请到「更多 → 运行日志」反馈。\n数据均存储在本地"
+    "title": "公告",
+    "content": "欢迎使用小贺影院。\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。\n遇到问题请到「更多 → 运行日志」反馈。\n数据均存储在本地"
   },
   "update": {
     "enabled": true,
-    "versionCode": 24,
-    "versionName": "3.8.1",
-    "force": true,
+    "versionCode": 25,
+    "versionName": "3.8.2",
+    "force": false,
     "mode": "jump",
     "url": "",
     "sizeBytes": 0,
     "md5": "",
-    "changelog": ""
+    "changelog": "这次只做测试，看看是否更新弹出"
   },
   "ads": {
     "enabled": true,
@@ -24,7 +24,8 @@
     "items": [
       "请不要相信视频内置的任何广告",
       "本站不存储任何视频资源，内容均来自第三方接口",
-      "遇到问题请到「更多 → 运行日志」反馈。。。测试"
+      "遇到问题请到「更多 → 运行日志」反馈",
+      "测试测试测试测试测试"
     ]
   },
   "splash": {
@@ -95,13 +96,13 @@
     "hotkeys": true,
     "dark": true,
     "favorite": true,
-    "live": true,
+    "live": false,
     "download": true
   },
   "tools": [
     {
       "id": "compress",
-      "title": "图片压缩",
+      "title": "测试",
       "desc": "将你的图片压缩到极致",
       "url": "",
       "icon": "image",
@@ -111,9 +112,9 @@
     },
     {
       "id": "qrcode",
-      "title": "二维码生成测试测试",
-      "desc": "文本一键转二维码",
-      "url": "",
+      "title": "二维码生成",
+      "desc": "测对方刚刚好",
+      "url": "https://haowallpaper.com/",
       "icon": "qrcode",
       "color": "#B03A34",
       "section": "图片工具",
@@ -167,7 +168,7 @@
       "icon": "android",
       "color": "#E04A4A",
       "section": "实用工具",
-      "enabled": true
+      "enabled": false
     }
   ],
   "misc": {
