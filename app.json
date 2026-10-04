@@ -1,48 +1,177 @@
 {
-  "说明": "小贺影院配置文件。改完点 Commit，再打开 https://purge.jsdelivr.net/gh/jiajian66/update@main/app.json 刷一下缓存，App 下次启动就生效。",
-
-  "公告": {
-    "开关": true,
-    "启动弹窗": true,
-    "标题": "公告",
-    "内容": "欢迎使用小贺影院。\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。\n遇到问题请到「更多 → 运行日志」反馈。"
-  },
-
-  "更新": {
-    "开关": true,
-    "最新版本号": 23,
-    "最新版本名": "3.8.0",
-    "强制更新": false,
-    "更新方式": "跳转",
-    "下载地址": "https://github.com/jiajian66/update/",
-    "安装包大小MB": 10,
-    "安装包MD5": "",
-    "更新说明": "1. 修了若干问题\n2. 启动图、公告、轮播条现在都能在这里改"
-  },
-
-  "轮播": {
-    "开关": true,
-    "显示行数": 1,
-    "切换间隔秒": 3,
-    "内容": [
-      "请不要相信视频内置的任何广告",
-      "我是你爸爸 你爸爸是我",
-      "遇到问题请到「更多 → 运行日志」反馈"
-    ]
-  },
-
-  "启动图": {
-    "模式": "内置",
-    "图片地址": ""
-  },
-
-  "功能开关": {
-    "断点续播": true,
-    "播放速度": true,
-    "播放历史": true,
-    "深色模式": true,
-    "收藏": true,
-    "直播": true,
-    "下载": true
-  }
+  "rev": 1,
+  "notice": {
+    "enabled": true,
+    "popup": true,
+    "title": "公告测试",
+    "content": "测试欢迎使用小贺影院。\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。\n遇到问题请到「更多 → 运行日志」反馈。\n数据均存储在本地"
+  },
+  "update": {
+    "enabled": true,
+    "versionCode": 24,
+    "versionName": "3.8.1",
+    "force": true,
+    "mode": "jump",
+    "url": "",
+    "sizeBytes": 0,
+    "md5": "",
+    "changelog": ""
+  },
+  "ads": {
+    "enabled": true,
+    "lines": 1,
+    "intervalMs": 3000,
+    "items": [
+      "请不要相信视频内置的任何广告",
+      "本站不存储任何视频资源，内容均来自第三方接口",
+      "遇到问题请到「更多 → 运行日志」反馈。。。测试"
+    ]
+  },
+  "splash": {
+    "mode": "builtin",
+    "url": ""
+  },
+  "lines": [
+    {
+      "id": "ff",
+      "name": "非凡",
+      "api": "",
+      "enabled": true
+    },
+    {
+      "id": "bf",
+      "name": "暴风",
+      "api": "",
+      "enabled": true
+    },
+    {
+      "id": "quantum",
+      "name": "量子",
+      "api": "",
+      "enabled": true
+    }
+  ],
+  "sources": [
+    {
+      "key": "guangsu",
+      "name": "光束",
+      "type": "applecms",
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+      "enabled": true
+    },
+    {
+      "key": "ffzy",
+      "name": "非凡",
+      "type": "applecms",
+      "api": "https://api.ffzyapi.com/api.php/provide/vod/",
+      "enabled": true
+    },
+    {
+      "key": "lzi",
+      "name": "量子",
+      "type": "applecms",
+      "api": "https://cj.lziapi.com/api.php/provide/vod/",
+      "enabled": true
+    },
+    {
+      "key": "dytt",
+      "name": "电影天堂",
+      "type": "applecms",
+      "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
+      "enabled": true
+    },
+    {
+      "key": "xinlang",
+      "name": "新浪",
+      "type": "applecms",
+      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
+      "enabled": true
+    }
+  ],
+  "features": {
+    "resume": true,
+    "speed": true,
+    "history": true,
+    "hotkeys": true,
+    "dark": true,
+    "favorite": true,
+    "live": true,
+    "download": true
+  },
+  "tools": [
+    {
+      "id": "compress",
+      "title": "图片压缩",
+      "desc": "将你的图片压缩到极致",
+      "url": "",
+      "icon": "image",
+      "color": "#E05A4F",
+      "section": "图片工具",
+      "enabled": true
+    },
+    {
+      "id": "qrcode",
+      "title": "二维码生成测试测试",
+      "desc": "文本一键转二维码",
+      "url": "",
+      "icon": "qrcode",
+      "color": "#B03A34",
+      "section": "图片工具",
+      "enabled": true
+    },
+    {
+      "id": "convert",
+      "title": "图片格式转换",
+      "desc": "JPG/PNG/WEBP/BMP 格式",
+      "url": "",
+      "icon": "convert",
+      "color": "#6A6AE0",
+      "section": "图片工具",
+      "enabled": true
+    },
+    {
+      "id": "watermark",
+      "title": "图片加水印",
+      "desc": "自定义图片水印",
+      "url": "",
+      "icon": "watermark",
+      "color": "#4FC3D9",
+      "section": "图片工具",
+      "enabled": true
+    },
+    {
+      "id": "stitch",
+      "title": "图片拼接",
+      "desc": "支持多图拼接",
+      "url": "",
+      "icon": "stitch",
+      "color": "#6C5CE7",
+      "section": "图片工具",
+      "enabled": true
+    },
+    {
+      "id": "round",
+      "title": "图片圆角",
+      "desc": "将图片四个角设置为弧形",
+      "url": "",
+      "icon": "round",
+      "color": "#3D7BF7",
+      "section": "图片工具",
+      "enabled": true
+    },
+    {
+      "id": "apk1",
+      "title": "apk.1 安装器",
+      "desc": "可安装微信接收的 apk.1 后缀包",
+      "url": "",
+      "icon": "android",
+      "color": "#E04A4A",
+      "section": "实用工具",
+      "enabled": true
+    }
+  ],
+  "misc": {
+    "shareUrl": "https://jiajian.my-place.us/video/app.apk",
+    "toolTitleSuffix": " - 在线小工具"
+  }
 }
