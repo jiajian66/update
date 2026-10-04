@@ -1,488 +1,207 @@
 {
-  "rev": 1,
-  "notice": {
-    "enabled": true,
-    "popup": true,
-    "title": "公告",
-    "content": "欢迎使用小贺影院。\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。\n遇到问题请到「更多 → 运行日志」反馈。"
-  },
-  "update": {
-    "enabled": false,
-    "versionCode": 27,
-    "versionName": "3.9.0",
-    "force": false,
-    "mode": "jump",
-    "url": "",
-    "sizeBytes": 0,
-    "md5": "",
-    "changelog": ""
-  },
-  "ads": {
-    "enabled": true,
-    "lines": 1,
-    "intervalMs": 3000,
-    "items": [
-      "请不要相信视频内置的任何广告",
-      "本站不存储任何视频资源，内容均来自第三方接口",
-      "遇到问题请到「更多 → 运行日志」反馈"
-    ]
-  },
-  "splash": {
-    "mode": "builtin",
-    "url": "",
-    "durationMs": 3500
-  },
-  "lines": [
-    {
-      "id": "ff",
-      "name": "非凡",
-      "api": "",
-      "enabled": true
-    },
-    {
-      "id": "bf",
-      "name": "暴风",
-      "api": "",
-      "enabled": true
-    },
-    {
-      "id": "quantum",
-      "name": "量子",
-      "api": "",
-      "enabled": true
-    }
-  ],
-  "sources": [
-    {
-      "key": "guangsu",
-      "name": "光束",
-      "type": "applecms",
-      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
-      "enabled": true
-    },
-    {
-      "key": "ffzy",
-      "name": "非凡",
-      "type": "applecms",
-      "api": "https://api.ffzyapi.com/api.php/provide/vod/",
-      "enabled": true
-    },
-    {
-      "key": "lzi",
-      "name": "量子",
-      "type": "applecms",
-      "api": "https://cj.lziapi.com/api.php/provide/vod/",
-      "enabled": true
-    },
-    {
-      "key": "dytt",
-      "name": "电影天堂",
-      "type": "applecms",
-      "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
-      "enabled": true
-    },
-    {
-      "key": "xinlang",
-      "name": "新浪",
-      "type": "applecms",
-      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
-      "enabled": true
-    }
-  ],
-  "features": {
-    "live": true,
-    "dark": true,
-    "history": true,
-    "resume": true,
-    "speed": true,
-    "hotkeys": true,
-    "favorite": true,
-    "download": true
-  },
-  "tools": [
-    {
-      "id": "p_douyin",
-      "title": "抖音全类型解析",
-      "desc": "无水印原画，支持视频 / 图集 / 实况照片",
-      "type": "parser",
-      "icon": "video",
-      "color": "#E04A6E",
-      "section": "解析工具",
-      "enabled": true,
-      "hint": "粘贴抖音分享链接，或含链接的整段分享文字",
-      "download": true,
-      "copyLink": true,
-      "api": [
-        {
-          "name": "主接口",
-          "url": "https://api.bugpk.com/api/douyin",
-          "enabled": true
-        }
-      ],
-      "map": {
-        "codePath": "code",
-        "codeOk": "200",
-        "msgPath": "msg",
-        "title": "data.title",
-        "typePath": "data.type",
-        "videoValues": [
-          "video",
-          "mp4"
-        ],
-        "imageValues": [
-          "image",
-          "images",
-          "photo"
-        ],
-        "liveValues": [
-          "live",
-          "live_photo",
-          "livephoto"
-        ],
-        "video": "data.url",
-        "images": "data.images",
-        "liveVideo": "data.live_photo[].video",
-        "liveImage": "data.live_photo[].image",
-        "music": "data.music.url",
-        "cover": "data.cover"
-      }
-    },
-    {
-      "id": "p_aggregate",
-      "title": "聚合视频解析",
-      "desc": "支持 20+ 平台：抖音 / 快手 / 小红书 / B站 / 西瓜 / 微博…",
-      "type": "parser",
-      "icon": "link",
-      "color": "#2563EB",
-      "section": "解析工具",
-      "enabled": true,
-      "hint": "粘贴任意平台的分享链接",
-      "download": true,
-      "copyLink": true,
-      "api": [
-        {
-          "name": "主接口",
-          "url": "https://api.bugpk.com/api/short_videos",
-          "enabled": true
-        }
-      ],
-      "map": {
-        "codePath": "code",
-        "codeOk": "200",
-        "msgPath": "msg",
-        "title": "data.title",
-        "videoValues": [
-          "video",
-          "mp4"
-        ],
-        "imageValues": [
-          "image",
-          "images",
-          "photo"
-        ],
-        "liveValues": [
-          "live",
-          "live_photo",
-          "livephoto"
-        ],
-        "video": "data.url",
-        "images": "data.images",
-        "liveVideo": "data.live_photo[].video",
-        "liveImage": "data.live_photo[].image",
-        "music": "data.music.url",
-        "cover": "data.cover"
-      }
-    },
-    {
-      "id": "p_dbimg",
-      "title": "豆包图片解析",
-      "desc": "提取豆包对话里生成的无水印图片",
-      "type": "parser",
-      "icon": "image",
-      "color": "#7C3AED",
-      "section": "解析工具",
-      "enabled": true,
-      "hint": "粘贴豆包分享链接",
-      "download": true,
-      "copyLink": true,
-      "api": [
-        {
-          "name": "主接口",
-          "url": "https://api.bugpk.com/api/dbduihua",
-          "enabled": true
-        }
-      ],
-      "map": {
-        "codePath": "code",
-        "codeOk": "200",
-        "msgPath": "msg",
-        "title": "data.title",
-        "videoValues": [
-          "video",
-          "mp4"
-        ],
-        "imageValues": [
-          "image",
-          "images",
-          "photo"
-        ],
-        "liveValues": [
-          "live",
-          "live_photo",
-          "livephoto"
-        ],
-        "video": "data.url",
-        "images": "data.images",
-        "liveVideo": "data.live_photo[].video",
-        "liveImage": "data.live_photo[].image",
-        "music": "data.music.url",
-        "cover": "data.cover"
-      }
-    },
-    {
-      "id": "p_dbvideo",
-      "title": "豆包视频解析",
-      "desc": "提取豆包生成的无水印视频",
-      "type": "parser",
-      "icon": "video",
-      "color": "#0891B2",
-      "section": "解析工具",
-      "enabled": true,
-      "hint": "粘贴豆包分享链接",
-      "download": true,
-      "copyLink": true,
-      "api": [
-        {
-          "name": "主接口",
-          "url": "https://api.bugpk.com/api/dbvideos",
-          "enabled": true
-        }
-      ],
-      "map": {
-        "codePath": "code",
-        "codeOk": "200",
-        "msgPath": "msg",
-        "title": "data.title",
-        "videoValues": [
-          "video",
-          "mp4"
-        ],
-        "imageValues": [
-          "image",
-          "images",
-          "photo"
-        ],
-        "liveValues": [
-          "live",
-          "live_photo",
-          "livephoto"
-        ],
-        "video": "data.url",
-        "images": "data.images",
-        "liveVideo": "data.live_photo[].video",
-        "liveImage": "data.live_photo[].image",
-        "music": "data.music.url",
-        "cover": "data.cover"
-      }
-    },
-    {
-      "id": "p_qianwen",
-      "title": "千问解析",
-      "desc": "千问对话里的图片 / 视频解析",
-      "type": "parser",
-      "icon": "text",
-      "color": "#4F46E5",
-      "section": "解析工具",
-      "enabled": true,
-      "hint": "粘贴千问分享链接",
-      "download": true,
-      "copyLink": true,
-      "api": [
-        {
-          "name": "主接口",
-          "url": "https://api.bugpk.com/api/qianwenimg",
-          "enabled": true
-        }
-      ],
-      "map": {
-        "codePath": "code",
-        "codeOk": "200",
-        "msgPath": "msg",
-        "title": "data.title",
-        "typePath": "data.type",
-        "videoValues": [
-          "video",
-          "mp4"
-        ],
-        "imageValues": [
-          "image",
-          "images",
-          "photo"
-        ],
-        "liveValues": [
-          "live",
-          "live_photo",
-          "livephoto"
-        ],
-        "video": "data.url",
-        "images": "data.images",
-        "liveVideo": "data.live_photo[].video",
-        "liveImage": "data.live_photo[].image",
-        "music": "data.music.url",
-        "cover": "data.cover"
-      }
-    },
-    {
-      "id": "p_netease",
-      "title": "网易云音乐解析",
-      "desc": "解析歌曲直链 + 歌词，可选音质",
-      "type": "parser",
-      "icon": "audio",
-      "color": "#DC2626",
-      "section": "解析工具",
-      "enabled": true,
-      "hint": "粘贴网易云音乐分享链接",
-      "download": true,
-      "copyLink": true,
-      "api": [
-        {
-          "name": "主接口",
-          "url": "https://api.bugpk.com/api/163_music",
-          "enabled": true,
-          "params": {
-            "type": "json"
-          },
-          "qualityParam": "level"
-        }
-      ],
-      "map": {
-        "codePath": "status",
-        "codeOk": "200",
-        "msgPath": "msg",
-        "title": "name",
-        "videoValues": [
-          "video",
-          "mp4"
-        ],
-        "imageValues": [
-          "image",
-          "images",
-          "photo"
-        ],
-        "liveValues": [
-          "live",
-          "live_photo",
-          "livephoto"
-        ],
-        "video": "data.url",
-        "images": "data.images",
-        "liveVideo": "data.live_photo[].video",
-        "liveImage": "data.live_photo[].image",
-        "music": "data.music.url",
-        "cover": "pic",
-        "audio": "url",
-        "lyric": "lyric",
-        "lyricTrans": "tlyric",
-        "artist": "ar_name",
-        "album": "al_name",
-        "qualityActual": "level",
-        "size": "size"
-      },
-      "qualities": [
-        {
-          "value": "standard",
-          "label": "标准音质"
-        },
-        {
-          "value": "exhigh",
-          "label": "极高音质"
-        },
-        {
-          "value": "lossless",
-          "label": "无损音质"
-        },
-        {
-          "value": "hires",
-          "label": "Hi-Res 音质"
-        },
-        {
-          "value": "jyeffect",
-          "label": "高清环绕声"
-        },
-        {
-          "value": "sky",
-          "label": "沉浸环绕声"
-        },
-        {
-          "value": "jymaster",
-          "label": "超清母带"
-        }
-      ]
-    },
-    {
-      "id": "p_random",
-      "title": "随机视频",
-      "desc": "随机刷短视频，点「下一个」换一个（多源自动重试）",
-      "type": "parser",
-      "icon": "android",
-      "color": "#EA580C",
-      "section": "娱乐工具",
-      "enabled": true,
-      "hint": "这个工具不用输入链接，点按钮就是随机一个",
-      "download": true,
-      "copyLink": true,
-      "api": [],
-      "map": {
-        "codePath": "code",
-        "codeOk": "200",
-        "msgPath": "msg",
-        "title": "data.title",
-        "typePath": "data.type",
-        "videoValues": [
-          "video",
-          "mp4"
-        ],
-        "imageValues": [
-          "image",
-          "images",
-          "photo"
-        ],
-        "liveValues": [
-          "live",
-          "live_photo",
-          "livephoto"
-        ],
-        "video": "data.url",
-        "images": "data.images",
-        "liveVideo": "data.live_photo[].video",
-        "liveImage": "data.live_photo[].image",
-        "music": "data.music.url",
-        "cover": "data.cover"
-      },
-      "stream": {
-        "sources": [
-          {
-            "name": "kuleu 直链",
-            "url": "https://api.kuleu.com/api/MP4_xiaojiejie",
-            "enabled": true,
-            "params": {
-              "type": "video"
-            }
-          },
-          {
-            "name": "dwo.cc",
-            "url": "https://openapi.dwo.cc/api/4qb_sp",
-            "enabled": true,
-            "jsonPath": "data.video.url"
-          }
-        ],
-        "fallbackUrl": "",
-        "autoNext": true
-      }
-    }
-  ],
-  "misc": {
-    "shareUrl": "https://jiajian.my-place.us/video/app.apk",
-    "toolTitleSuffix": " - 在线小工具"
-  }
+    "rev":  2,
+    "notice":  {
+                   "enabled":  true,
+                   "popup":  true,
+                   "title":  "公告",
+                   "content":  "欢迎使用小贺影院。\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。\n遇到问题请到「更多 → 运行日志」反馈。"
+               },
+    "update":  {
+                   "enabled":  false,
+                   "versionCode":  27,
+                   "versionName":  "3.9.0",
+                   "force":  false,
+                   "mode":  "jump",
+                   "url":  "",
+                   "sizeBytes":  0,
+                   "md5":  "",
+                   "changelog":  ""
+               },
+    "ads":  {
+                "enabled":  true,
+                "lines":  1,
+                "intervalMs":  3000,
+                "items":  [
+                              "请不要相信视频内置的任何广告",
+                              "本站不存储任何视频资源，内容均来自第三方接口",
+                              "遇到问题请到「更多 → 运行日志」反馈"
+                          ]
+            },
+    "splash":  {
+                   "mode":  "builtin",
+                   "url":  "",
+                   "durationMs":  3500
+               },
+    "lines":  [
+                  {
+                      "id":  "ff",
+                      "name":  "非凡",
+                      "enabled":  true
+                  },
+                  {
+                      "id":  "bf",
+                      "name":  "暴风",
+                      "enabled":  true
+                  },
+                  {
+                      "id":  "quantum",
+                      "name":  "量子",
+                      "enabled":  true
+                  }
+              ],
+    "sources":  [
+                    {
+                        "key":  "guangsu",
+                        "name":  "光束",
+                        "type":  "applecms",
+                        "api":  "https://api.guangsuapi.com/api.php/provide/vod/",
+                        "enabled":  true
+                    },
+                    {
+                        "key":  "ffzy",
+                        "name":  "非凡",
+                        "type":  "applecms",
+                        "api":  "https://api.ffzyapi.com/api.php/provide/vod/",
+                        "enabled":  true
+                    },
+                    {
+                        "key":  "lzi",
+                        "name":  "量子",
+                        "type":  "applecms",
+                        "api":  "https://cj.lziapi.com/api.php/provide/vod/",
+                        "enabled":  true
+                    },
+                    {
+                        "key":  "dytt",
+                        "name":  "电影天堂",
+                        "type":  "applecms",
+                        "api":  "https://caiji.dyttzyapi.com/api.php/provide/vod/",
+                        "enabled":  true
+                    },
+                    {
+                        "key":  "xinlang",
+                        "name":  "新浪",
+                        "type":  "applecms",
+                        "api":  "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
+                        "enabled":  true
+                    }
+                ],
+    "features":  {
+                     "live":  true,
+                     "dark":  true,
+                     "history":  true,
+                     "resume":  true,
+                     "speed":  true,
+                     "hotkeys":  true,
+                     "favorite":  true,
+                     "download":  true
+                 },
+    "dialogs":  [
+                    {
+                        "id":  "welcome",
+                        "title":  "欢迎",
+                        "content":  "1、本站所有接口数据均来自网络，本站不提供非文档内容的相关数据存储。\n2、若本站相关接口侵犯了贵司、个人的相关权益，请编辑相关接口内容并声明所涉及的侵犯内容发送至邮箱：3193682769@qq.com，我们将第一时间进行处理并回复。",
+                        "trigger":  "welcome",
+                        "webMenuId":  "",
+                        "button":  "已读",
+                        "once":  true,
+                        "enabled":  true
+                    },
+                    {
+                        "id":  "disclaimer",
+                        "title":  "免责声明",
+                        "content":  "1、本站所有接口数据均来自网络，本站不提供非文档内容的相关数据存储。\n2、暂仅提供接口对接服务，未部署至服务器，所以接口状态「正常」仅作装饰。\n3、接口问题请点击右上角菜单查看接口地址，查看接口文档及开发文档。",
+                        "trigger":  "menu",
+                        "webMenuId":  "mzsm",
+                        "button":  "知道了",
+                        "once":  false,
+                        "enabled":  true
+                    },
+                    {
+                        "id":  "changelog",
+                        "title":  "更新日志",
+                        "content":  "1、本次主要修改了 UI 及手机端适配问题\n2、修复了网易云解析、豆包图片解析，新增豆包视频解析\n3、优化了网页跳转方式，让使用更流畅",
+                        "trigger":  "menu",
+                        "webMenuId":  "xgrz",
+                        "button":  "已读",
+                        "once":  false,
+                        "enabled":  true
+                    }
+                ],
+    "tools":  [
+                  {
+                      "id":  "dyjx",
+                      "title":  "抖音全类型解析",
+                      "desc":  "无水印原画解析，支持动图，图集，视频",
+                      "url":  "local:dyjx.html",
+                      "icon":  "video",
+                      "color":  "#E04A6E",
+                      "section":  "解析工具",
+                      "enabled":  true
+                  },
+                  {
+                      "id":  "jhjx",
+                      "title":  "聚合视频解析",
+                      "desc":  "短视频解析聚合支持 20+ 平台：抖音、快手、小红书、bilibili、西瓜视频、微视、A站、知乎、美拍、虎牙、推特、ins、豆包、即梦 AI、视频号等",
+                      "url":  "local:jhjx.html",
+                      "icon":  "link",
+                      "color":  "#2563EB",
+                      "section":  "解析工具",
+                      "enabled":  true
+                  },
+                  {
+                      "id":  "dbtp",
+                      "title":  "豆包图片解析",
+                      "desc":  "提取豆包生成的无水印图片",
+                      "url":  "local:dbtp.html",
+                      "icon":  "image",
+                      "color":  "#7C3AED",
+                      "section":  "解析工具",
+                      "enabled":  true
+                  },
+                  {
+                      "id":  "dbvideo",
+                      "title":  "豆包视频解析",
+                      "desc":  "豆包视频解析",
+                      "url":  "local:dbvideo.html",
+                      "icon":  "video",
+                      "color":  "#0891B2",
+                      "section":  "解析工具",
+                      "enabled":  true
+                  },
+                  {
+                      "id":  "qw",
+                      "title":  "千问解析",
+                      "desc":  "千问对话图片/视频解析",
+                      "url":  "local:qw.html",
+                      "icon":  "text",
+                      "color":  "#4F46E5",
+                      "section":  "解析工具",
+                      "enabled":  true
+                  },
+                  {
+                      "id":  "wyy",
+                      "title":  "网易云音乐解析",
+                      "desc":  "接口方若获赞助则可下载更高音质，否则只能下载会员音乐普通音质",
+                      "url":  "local:wyy.html",
+                      "icon":  "audio",
+                      "color":  "#DC2626",
+                      "section":  "解析工具",
+                      "enabled":  true
+                  },
+                  {
+                      "id":  "sp",
+                      "title":  "随机视频",
+                      "desc":  "随机刷短视频，点「跳过」换一个",
+                      "url":  "local:sp.html",
+                      "icon":  "android",
+                      "color":  "#EA580C",
+                      "section":  "娱乐工具",
+                      "enabled":  true
+                  }
+              ],
+    "misc":  {
+                 "shareUrl":  "https://jiajian.my-place.us/video/app.apk",
+                 "toolTitleSuffix":  " - 在线小工具"
+             }
 }
