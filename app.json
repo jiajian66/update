@@ -1,21 +1,21 @@
 {
-  "rev": 3,
+  "rev": 1,
   "notice": {
     "enabled": true,
     "popup": true,
     "title": "公告",
-    "content": "欢迎使用小贺影院。\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。\n遇到问题请到「更多 → 运行日志」反馈。\n数据均存储在本地哈哈哈哈哈哈哈哈"
+    "content": "欢迎使用小贺影院。\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。\n遇到问题请到「更多 → 运行日志」反馈。"
   },
   "update": {
-    "enabled": true,
-    "versionCode": 25,
-    "versionName": "3.8.2",
+    "enabled": false,
+    "versionCode": 27,
+    "versionName": "3.9.0",
     "force": false,
     "mode": "jump",
     "url": "",
     "sizeBytes": 0,
     "md5": "",
-    "changelog": "这次只做测试，看看是否更新弹出"
+    "changelog": ""
   },
   "ads": {
     "enabled": true,
@@ -24,13 +24,13 @@
     "items": [
       "请不要相信视频内置的任何广告",
       "本站不存储任何视频资源，内容均来自第三方接口",
-      "遇到问题请到「更多 → 运行日志」反馈",
-      "测试测试测试测试测试"
+      "遇到问题请到「更多 → 运行日志」反馈"
     ]
   },
   "splash": {
     "mode": "builtin",
-    "url": ""
+    "url": "",
+    "durationMs": 3500
   },
   "lines": [
     {
@@ -90,85 +90,395 @@
     }
   ],
   "features": {
+    "live": true,
+    "dark": true,
+    "history": true,
     "resume": true,
     "speed": true,
-    "history": true,
     "hotkeys": true,
-    "dark": true,
     "favorite": true,
-    "live": false,
     "download": true
   },
   "tools": [
     {
-      "id": "compress",
-      "title": "测试",
-      "desc": "将你的图片压缩到极致",
-      "url": "",
+      "id": "p_douyin",
+      "title": "抖音全类型解析",
+      "desc": "无水印原画，支持视频 / 图集 / 实况照片",
+      "type": "parser",
+      "icon": "video",
+      "color": "#E04A6E",
+      "section": "解析工具",
+      "enabled": true,
+      "hint": "粘贴抖音分享链接，或含链接的整段分享文字",
+      "download": true,
+      "copyLink": true,
+      "api": [
+        {
+          "name": "主接口",
+          "url": "https://api.bugpk.com/api/douyin",
+          "enabled": true
+        }
+      ],
+      "map": {
+        "codePath": "code",
+        "codeOk": "200",
+        "msgPath": "msg",
+        "title": "data.title",
+        "typePath": "data.type",
+        "videoValues": [
+          "video",
+          "mp4"
+        ],
+        "imageValues": [
+          "image",
+          "images",
+          "photo"
+        ],
+        "liveValues": [
+          "live",
+          "live_photo",
+          "livephoto"
+        ],
+        "video": "data.url",
+        "images": "data.images",
+        "liveVideo": "data.live_photo[].video",
+        "liveImage": "data.live_photo[].image",
+        "music": "data.music.url",
+        "cover": "data.cover"
+      }
+    },
+    {
+      "id": "p_aggregate",
+      "title": "聚合视频解析",
+      "desc": "支持 20+ 平台：抖音 / 快手 / 小红书 / B站 / 西瓜 / 微博…",
+      "type": "parser",
+      "icon": "link",
+      "color": "#2563EB",
+      "section": "解析工具",
+      "enabled": true,
+      "hint": "粘贴任意平台的分享链接",
+      "download": true,
+      "copyLink": true,
+      "api": [
+        {
+          "name": "主接口",
+          "url": "https://api.bugpk.com/api/short_videos",
+          "enabled": true
+        }
+      ],
+      "map": {
+        "codePath": "code",
+        "codeOk": "200",
+        "msgPath": "msg",
+        "title": "data.title",
+        "videoValues": [
+          "video",
+          "mp4"
+        ],
+        "imageValues": [
+          "image",
+          "images",
+          "photo"
+        ],
+        "liveValues": [
+          "live",
+          "live_photo",
+          "livephoto"
+        ],
+        "video": "data.url",
+        "images": "data.images",
+        "liveVideo": "data.live_photo[].video",
+        "liveImage": "data.live_photo[].image",
+        "music": "data.music.url",
+        "cover": "data.cover"
+      }
+    },
+    {
+      "id": "p_dbimg",
+      "title": "豆包图片解析",
+      "desc": "提取豆包对话里生成的无水印图片",
+      "type": "parser",
       "icon": "image",
-      "color": "#E05A4F",
-      "section": "图片工具",
-      "enabled": true
+      "color": "#7C3AED",
+      "section": "解析工具",
+      "enabled": true,
+      "hint": "粘贴豆包分享链接",
+      "download": true,
+      "copyLink": true,
+      "api": [
+        {
+          "name": "主接口",
+          "url": "https://api.bugpk.com/api/dbduihua",
+          "enabled": true
+        }
+      ],
+      "map": {
+        "codePath": "code",
+        "codeOk": "200",
+        "msgPath": "msg",
+        "title": "data.title",
+        "videoValues": [
+          "video",
+          "mp4"
+        ],
+        "imageValues": [
+          "image",
+          "images",
+          "photo"
+        ],
+        "liveValues": [
+          "live",
+          "live_photo",
+          "livephoto"
+        ],
+        "video": "data.url",
+        "images": "data.images",
+        "liveVideo": "data.live_photo[].video",
+        "liveImage": "data.live_photo[].image",
+        "music": "data.music.url",
+        "cover": "data.cover"
+      }
     },
     {
-      "id": "qrcode",
-      "title": "二维码生成",
-      "desc": "测对方刚刚好",
-      "url": "https://haowallpaper.com/",
-      "icon": "qrcode",
-      "color": "#B03A34",
-      "section": "图片工具",
-      "enabled": true
+      "id": "p_dbvideo",
+      "title": "豆包视频解析",
+      "desc": "提取豆包生成的无水印视频",
+      "type": "parser",
+      "icon": "video",
+      "color": "#0891B2",
+      "section": "解析工具",
+      "enabled": true,
+      "hint": "粘贴豆包分享链接",
+      "download": true,
+      "copyLink": true,
+      "api": [
+        {
+          "name": "主接口",
+          "url": "https://api.bugpk.com/api/dbvideos",
+          "enabled": true
+        }
+      ],
+      "map": {
+        "codePath": "code",
+        "codeOk": "200",
+        "msgPath": "msg",
+        "title": "data.title",
+        "videoValues": [
+          "video",
+          "mp4"
+        ],
+        "imageValues": [
+          "image",
+          "images",
+          "photo"
+        ],
+        "liveValues": [
+          "live",
+          "live_photo",
+          "livephoto"
+        ],
+        "video": "data.url",
+        "images": "data.images",
+        "liveVideo": "data.live_photo[].video",
+        "liveImage": "data.live_photo[].image",
+        "music": "data.music.url",
+        "cover": "data.cover"
+      }
     },
     {
-      "id": "convert",
-      "title": "图片格式转换",
-      "desc": "JPG/PNG/WEBP/BMP 格式",
-      "url": "",
-      "icon": "convert",
-      "color": "#6A6AE0",
-      "section": "图片工具",
-      "enabled": true
+      "id": "p_qianwen",
+      "title": "千问解析",
+      "desc": "千问对话里的图片 / 视频解析",
+      "type": "parser",
+      "icon": "text",
+      "color": "#4F46E5",
+      "section": "解析工具",
+      "enabled": true,
+      "hint": "粘贴千问分享链接",
+      "download": true,
+      "copyLink": true,
+      "api": [
+        {
+          "name": "主接口",
+          "url": "https://api.bugpk.com/api/qianwenimg",
+          "enabled": true
+        }
+      ],
+      "map": {
+        "codePath": "code",
+        "codeOk": "200",
+        "msgPath": "msg",
+        "title": "data.title",
+        "typePath": "data.type",
+        "videoValues": [
+          "video",
+          "mp4"
+        ],
+        "imageValues": [
+          "image",
+          "images",
+          "photo"
+        ],
+        "liveValues": [
+          "live",
+          "live_photo",
+          "livephoto"
+        ],
+        "video": "data.url",
+        "images": "data.images",
+        "liveVideo": "data.live_photo[].video",
+        "liveImage": "data.live_photo[].image",
+        "music": "data.music.url",
+        "cover": "data.cover"
+      }
     },
     {
-      "id": "watermark",
-      "title": "图片加水印",
-      "desc": "自定义图片水印",
-      "url": "",
-      "icon": "watermark",
-      "color": "#4FC3D9",
-      "section": "图片工具",
-      "enabled": true
+      "id": "p_netease",
+      "title": "网易云音乐解析",
+      "desc": "解析歌曲直链 + 歌词，可选音质",
+      "type": "parser",
+      "icon": "audio",
+      "color": "#DC2626",
+      "section": "解析工具",
+      "enabled": true,
+      "hint": "粘贴网易云音乐分享链接",
+      "download": true,
+      "copyLink": true,
+      "api": [
+        {
+          "name": "主接口",
+          "url": "https://api.bugpk.com/api/163_music",
+          "enabled": true,
+          "params": {
+            "type": "json"
+          },
+          "qualityParam": "level"
+        }
+      ],
+      "map": {
+        "codePath": "status",
+        "codeOk": "200",
+        "msgPath": "msg",
+        "title": "name",
+        "videoValues": [
+          "video",
+          "mp4"
+        ],
+        "imageValues": [
+          "image",
+          "images",
+          "photo"
+        ],
+        "liveValues": [
+          "live",
+          "live_photo",
+          "livephoto"
+        ],
+        "video": "data.url",
+        "images": "data.images",
+        "liveVideo": "data.live_photo[].video",
+        "liveImage": "data.live_photo[].image",
+        "music": "data.music.url",
+        "cover": "pic",
+        "audio": "url",
+        "lyric": "lyric",
+        "lyricTrans": "tlyric",
+        "artist": "ar_name",
+        "album": "al_name",
+        "qualityActual": "level",
+        "size": "size"
+      },
+      "qualities": [
+        {
+          "value": "standard",
+          "label": "标准音质"
+        },
+        {
+          "value": "exhigh",
+          "label": "极高音质"
+        },
+        {
+          "value": "lossless",
+          "label": "无损音质"
+        },
+        {
+          "value": "hires",
+          "label": "Hi-Res 音质"
+        },
+        {
+          "value": "jyeffect",
+          "label": "高清环绕声"
+        },
+        {
+          "value": "sky",
+          "label": "沉浸环绕声"
+        },
+        {
+          "value": "jymaster",
+          "label": "超清母带"
+        }
+      ]
     },
     {
-      "id": "stitch",
-      "title": "图片拼接",
-      "desc": "支持多图拼接",
-      "url": "",
-      "icon": "stitch",
-      "color": "#6C5CE7",
-      "section": "图片工具",
-      "enabled": true
-    },
-    {
-      "id": "round",
-      "title": "图片圆角",
-      "desc": "将图片四个角设置为弧形",
-      "url": "",
-      "icon": "round",
-      "color": "#3D7BF7",
-      "section": "图片工具",
-      "enabled": true
-    },
-    {
-      "id": "apk1",
-      "title": "apk.1 安装器",
-      "desc": "可安装微信接收的 apk.1 后缀包",
-      "url": "",
+      "id": "p_random",
+      "title": "随机视频",
+      "desc": "随机刷短视频，点「下一个」换一个（多源自动重试）",
+      "type": "parser",
       "icon": "android",
-      "color": "#E04A4A",
-      "section": "实用工具",
-      "enabled": false
+      "color": "#EA580C",
+      "section": "娱乐工具",
+      "enabled": true,
+      "hint": "这个工具不用输入链接，点按钮就是随机一个",
+      "download": true,
+      "copyLink": true,
+      "api": [],
+      "map": {
+        "codePath": "code",
+        "codeOk": "200",
+        "msgPath": "msg",
+        "title": "data.title",
+        "typePath": "data.type",
+        "videoValues": [
+          "video",
+          "mp4"
+        ],
+        "imageValues": [
+          "image",
+          "images",
+          "photo"
+        ],
+        "liveValues": [
+          "live",
+          "live_photo",
+          "livephoto"
+        ],
+        "video": "data.url",
+        "images": "data.images",
+        "liveVideo": "data.live_photo[].video",
+        "liveImage": "data.live_photo[].image",
+        "music": "data.music.url",
+        "cover": "data.cover"
+      },
+      "stream": {
+        "sources": [
+          {
+            "name": "kuleu 直链",
+            "url": "https://api.kuleu.com/api/MP4_xiaojiejie",
+            "enabled": true,
+            "params": {
+              "type": "video"
+            }
+          },
+          {
+            "name": "dwo.cc",
+            "url": "https://openapi.dwo.cc/api/4qb_sp",
+            "enabled": true,
+            "jsonPath": "data.video.url"
+          }
+        ],
+        "fallbackUrl": "",
+        "autoNext": true
+      }
     }
   ],
   "misc": {
