@@ -1,0 +1,184 @@
+{
+  "rev": 29,
+  "notice": {
+    "enabled": false,
+    "popup": false,
+    "title": "公告",
+    "content": "欢迎使用小贺影院。\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。"
+  },
+  "update": {
+    "enabled": false,
+    "versionCode": 29,
+    "versionName": "4.1.0",
+    "force": false,
+    "mode": "jump",
+    "url": "",
+    "sizeBytes": 0,
+    "md5": "",
+    "changelog": ""
+  },
+  "ads": {
+    "enabled": true,
+    "lines": 1,
+    "intervalMs": 3000,
+    "items": [
+      "小贺影院 · 全网影视免费看",
+      "更多工具 · 主流平台视频图片音乐一键解析",
+      "Code by DeepSeek V4.1flash & jian .2026"
+    ]
+  },
+  "splash": {
+    "mode": "builtin",
+    "url": "",
+    "durationMs": 4000
+  },
+  "lines": [
+    {
+      "id": "ff",
+      "name": "非凡",
+      "enabled": true
+    },
+    {
+      "id": "bf",
+      "name": "暴风",
+      "enabled": true
+    },
+    {
+      "id": "quantum",
+      "name": "量子",
+      "enabled": true
+    }
+  ],
+  "sources": [
+    {
+      "key": "guangsu",
+      "name": "光束",
+      "type": "applecms",
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+      "enabled": true
+    },
+    {
+      "key": "ffzy",
+      "name": "非凡",
+      "type": "applecms",
+      "api": "https://api.ffzyapi.com/api.php/provide/vod/",
+      "enabled": true
+    },
+    {
+      "key": "lzi",
+      "name": "量子",
+      "type": "applecms",
+      "api": "https://cj.lziapi.com/api.php/provide/vod/",
+      "enabled": true
+    },
+    {
+      "key": "dytt",
+      "name": "电影天堂",
+      "type": "applecms",
+      "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
+      "enabled": true
+    },
+    {
+      "key": "xinlang",
+      "name": "新浪",
+      "type": "applecms",
+      "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
+      "enabled": true
+    }
+  ],
+  "features": {
+    "live": true,
+    "dark": true,
+    "history": true,
+    "favorite": true,
+    "download": true,
+    "speed": true
+  },
+  "dialogs": [
+    {
+      "id": "welcome",
+      "title": "欢迎",
+      "content": "1、本站所有接口数据均来自网络，本站不提供非文档内容的相关数据存储。\n2、若本站相关接口侵犯了贵司、个人的相关权益，请编辑相关接口内容并声明所涉及的侵犯内容发送至邮箱：3193682769@qq.com，我们将第一时间进行处理并回复。",
+      "trigger": "welcome",
+      "button": "已读",
+      "once": false,
+      "enabled": false
+    }
+  ],
+  "tools": [
+    {
+      "id": "dyjx",
+      "title": "抖音全类型解析",
+      "desc": "无水印原画解析，支持动图，图集，视频",
+      "url": "local:dyjx.html",
+      "icon": "video",
+      "color": "#E04A6E",
+      "section": "解析工具",
+      "enabled": true
+    },
+    {
+      "id": "jhjx",
+      "title": "聚合视频解析",
+      "desc": "短视频解析聚合支持 20+ 平台",
+      "url": "local:jhjx.html",
+      "icon": "link",
+      "color": "#2563EB",
+      "section": "解析工具",
+      "enabled": true
+    },
+    {
+      "id": "dbtp",
+      "title": "豆包图片解析",
+      "desc": "提取豆包生成的无水印图片",
+      "url": "local:dbtp.html",
+      "icon": "image",
+      "color": "#7C3AED",
+      "section": "解析工具",
+      "enabled": true
+    },
+    {
+      "id": "dbvideo",
+      "title": "豆包视频解析",
+      "desc": "豆包视频解析",
+      "url": "local:dbvideo.html",
+      "icon": "video",
+      "color": "#0891B2",
+      "section": "解析工具",
+      "enabled": true
+    },
+    {
+      "id": "wyy",
+      "title": "网易云音乐解析",
+      "desc": "接口方若获赞助则可下载更高音质",
+      "url": "local:wyy.html",
+      "icon": "audio",
+      "color": "#DC2626",
+      "section": "解析工具",
+      "enabled": true
+    },
+    {
+      "id": "sp",
+      "title": "随机视频",
+      "desc": "随机刷短视频，点「跳过」换一个",
+      "url": "local:sp.html",
+      "icon": "android",
+      "color": "#EA580C",
+      "section": "娱乐工具",
+      "enabled": true
+    },
+    {
+      "id": "yiyan",
+      "title": "每日一言",
+      "desc": "随机一句中文名言，点「换一句」再来",
+      "url": "local:yiyan.html",
+      "icon": "text",
+      "color": "#0D9488",
+      "section": "娱乐工具",
+      "enabled": true
+    }
+  ],
+  "misc": {
+    "shareUrl": "https://jiajian.my-place.us/video/app.apk",
+    "disclaimer": "本应用所有内容均来自第三方接口，仅供学习交流，请于 24 小时内删除。"
+  }
+}
