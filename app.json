@@ -1,5 +1,5 @@
 {
-    "rev":  4,
+    "rev":  5,
     "notice":  {
                    "enabled":  true,
                    "popup":  true,
@@ -161,16 +161,6 @@
                       "url":  "local:dbvideo.html",
                       "icon":  "video",
                       "color":  "#0891B2",
-                      "section":  "解析工具",
-                      "enabled":  true
-                  },
-                  {
-                      "id":  "dyzy",
-                      "title":  "抖音主页解析",
-                      "desc":  "粘贴抖音主页链接，列出博主信息和最新作品",
-                      "url":  "local:dyzy.html",
-                      "icon":  "link",
-                      "color":  "#DB2777",
                       "section":  "解析工具",
                       "enabled":  true
                   },
