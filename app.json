@@ -1,5 +1,5 @@
 {
-  "rev": 29,
+  "rev": 30,
   "notice": {
     "enabled": false,
     "popup": false,
@@ -7,15 +7,15 @@
     "content": "欢迎使用小贺影院。\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。"
   },
   "update": {
-    "enabled": false,
-    "versionCode": 29,
-    "versionName": "4.1.0",
-    "force": false,
-    "mode": "jump",
-    "url": "",
-    "sizeBytes": 0,
+    "enabled": true,
+    "versionCode": 30,
+    "versionName": "4.1.2",
+    "force": true,
+    "mode": "hot",
+    "url": "https://jiajian.my-place.us/video/v4.12.apk",
+    "sizeBytes": 5767168,
     "md5": "",
-    "changelog": ""
+    "changelog": "1.修复了非法内容未过滤的重大bug\n2.感谢用户涛与高的反馈\n3.您可在更多/更多工具使用更多实用功能"
   },
   "ads": {
     "enabled": true,
@@ -101,8 +101,8 @@
       "content": "1、本站所有接口数据均来自网络，本站不提供非文档内容的相关数据存储。\n2、若本站相关接口侵犯了贵司、个人的相关权益，请编辑相关接口内容并声明所涉及的侵犯内容发送至邮箱：3193682769@qq.com，我们将第一时间进行处理并回复。",
       "trigger": "welcome",
       "button": "已读",
-      "once": false,
-      "enabled": false
+      "once": true,
+      "enabled": true
     }
   ],
   "tools": [
@@ -178,7 +178,7 @@
     }
   ],
   "misc": {
-    "shareUrl": "https://jiajian.my-place.us/video/app.apk",
+    "shareUrl": "https://jiajian.my-place.us/video/v4.12.apk",
     "disclaimer": "本应用所有内容均来自第三方接口，仅供学习交流，请于 24 小时内删除。"
   }
 }
