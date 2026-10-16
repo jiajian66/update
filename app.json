@@ -1,86 +1,87 @@
 {
-  "rev": 30,
+  "rev": 33,
   "notice": {
     "enabled": false,
     "popup": false,
     "title": "公告",
-    "content": "欢迎使用小贺影院。\n本站不存储、不传播任何视频文件，所有内容均来自第三方接口。"
+    "content": ""
   },
   "update": {
     "enabled": true,
-    "versionCode": 30,
-    "versionName": "4.1.2",
+    "versionCode": 33,
+    "versionName": "4.22",
     "force": true,
     "mode": "jump",
-    "url": "https://jiajian.lanzoub.com/iEtB64b1043e",
+    "url": "https://jiajian.lanzoub.com/ihxFW4c9hxmd",
     "sizeBytes": 5767168,
     "md5": "",
-    "changelog": "1.修复了非法内容未过滤的重大bug\n2.下载后请解压后安装\n2.感谢用户涛与高的反馈\n3.您可在更多/更多工具使用更多实用功能"
+    "changelog": "1.修改了播放器倍速逻辑\n2.修复了播放器跳过片头和片尾逻辑（您可在设置里按需更改）\n3.修复了平板端启动图排版错乱\n4.修复了双击跳转秒数\n5.其他已知问题"
   },
   "ads": {
     "enabled": true,
     "lines": 1,
-    "intervalMs": 3000,
+    "intervalMs": 3500,
     "items": [
-      "小贺影院 · 全网影视免费看",
-      "点更多->更多工具使用更多实用工具",
+      "请不要相信视频内置的任何广告",
+      "更多工具 · 主流平台视频图片音乐一键解析",
+      "如有问题请及时反馈",
       "Code by DeepSeek V4.1flash & jian .2026"
     ]
   },
   "splash": {
     "mode": "builtin",
     "url": "",
-    "durationMs": 4000
+    "durationMs": 4300
   },
   "lines": [
     {
       "id": "ff",
-      "name": "非凡",
+      "name": "主线路1",
       "enabled": true
     },
     {
       "id": "bf",
-      "name": "暴风",
+      "name": "主线路2",
       "enabled": true
     },
     {
       "id": "quantum",
-      "name": "量子",
+      "name": "主线路3",
       "enabled": true
     }
   ],
   "sources": [
     {
       "key": "guangsu",
-      "name": "光束",
+      "name": "备用线路1",
       "type": "applecms",
       "api": "https://api.guangsuapi.com/api.php/provide/vod/",
       "enabled": true
     },
     {
       "key": "ffzy",
-      "name": "非凡",
+      "name": "备用线路2",
       "type": "applecms",
       "api": "https://api.ffzyapi.com/api.php/provide/vod/",
       "enabled": true
     },
     {
       "key": "lzi",
-      "name": "量子",
+      "name": "备用线路3",
       "type": "applecms",
       "api": "https://cj.lziapi.com/api.php/provide/vod/",
       "enabled": true
     },
     {
       "key": "dytt",
-      "name": "电影天堂",
+      "name": "备用线路4",
       "type": "applecms",
       "api": "https://caiji.dyttzyapi.com/api.php/provide/vod/",
       "enabled": true
     },
     {
       "key": "xinlang",
-      "name": "新浪",
+      "name": "备用线路5",
       "type": "applecms",
       "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
       "enabled": true
@@ -178,7 +179,7 @@
     }
   ],
   "misc": {
-    "shareUrl": "https://jiajian.lanzoub.com/iEtB64b1043e",
+    "shareUrl": "https://jiajian.lanzoub.com/ihxFW4c9hxmd",
     "disclaimer": "本应用所有内容均来自第三方接口，仅供学习交流，请于 24 小时内删除。"
   }
 }
