@@ -1,37 +1,36 @@
 {
-  "rev": 33,
+  "rev": 35,
   "notice": {
-    "enabled": false,
+    "enabled": true,
     "popup": false,
     "title": "公告",
-    "content": ""
+    "content": "作者似乎还没写..."
   },
   "update": {
     "enabled": true,
-    "versionCode": 33,
-    "versionName": "4.22",
+    "versionCode": 35,
+    "versionName": "4.24",
     "force": true,
     "mode": "jump",
-    "url": "https://jiajian.lanzoub.com/ihxFW4c9hxmd",
-    "sizeBytes": 5767168,
+    "url": "https://jiajian.lanzoub.com/b0eviitof",
+    "sizeBytes": 5976883,
     "md5": "",
-    "changelog": "1.修改了播放器倍速逻辑\n2.修复了播放器跳过片头和片尾逻辑（您可在设置里按需更改）\n3.修复了平板端启动图排版错乱\n4.修复了双击跳转秒数\n5.其他已知问题"
+    "changelog": "1.修改了播放器倍速逻辑\n2.修复了播放器跳过片头和片尾逻辑（您可在设置里按需更改）\n3.修复了平板端启动图排版错乱\n4.修复了双击跳转秒数\n5.（重大更新）直播页使用更佳\n6.提升了默认画质清晰度为更高\n7.自动跳过结尾与开头优化并默认关闭"
   },
   "ads": {
     "enabled": true,
     "lines": 1,
-    "intervalMs": 3500,
+    "intervalMs": 2500,
     "items": [
       "请不要相信视频内置的任何广告",
       "更多工具 · 主流平台视频图片音乐一键解析",
-      "如有问题请及时反馈",
-      "Code by DeepSeek V4.1flash & jian .2026"
+      "如有问题请及时反馈"
     ]
   },
   "splash": {
     "mode": "builtin",
     "url": "",
-    "durationMs": 4300
+    "durationMs": 4000
   },
   "lines": [
     {
@@ -95,17 +94,6 @@
     "download": true,
     "speed": true
   },
-  "dialogs": [
-    {
-      "id": "welcome",
-      "title": "欢迎",
-      "content": "1、本站所有接口数据均来自网络，本站不提供非文档内容的相关数据存储。\n2、若本站相关接口侵犯了贵司、个人的相关权益，请编辑相关接口内容并声明所涉及的侵犯内容发送至邮箱：3193682769@qq.com，我们将第一时间进行处理并回复。",
-      "trigger": "welcome",
-      "button": "已读",
-      "once": false,
-      "enabled": false
-    }
-  ],
   "tools": [
     {
       "id": "dyjx",
@@ -179,7 +167,9 @@
     }
   ],
   "misc": {
-    "shareUrl": "https://jiajian.lanzoub.com/ihxFW4c9hxmd",
-    "disclaimer": "本应用所有内容均来自第三方接口，仅供学习交流，请于 24 小时内删除。"
+    "shareUrl": "https://jiajian.lanzoub.com/b0eviitof",
+    "sharePwd": "",
+    "moreSubtitle": "当前版本 · v{version}",
+    "disclaimer": "Code by DeepSeek V4.1flash & jian.2026"
   }
 }
