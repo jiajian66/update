@@ -12,7 +12,7 @@
     "versionName": "4.24",
     "force": true,
     "mode": "jump",
-    "url": "https://jiajian.lanzoub.com/b0eviitof",
+    "url": "https://yun.139.com/shareweb/#/w/i/2yrhN08DgGatk",
     "sizeBytes": 5976883,
     "md5": "",
     "changelog": "1.修改了播放器倍速逻辑\n2.修复了播放器跳过片头和片尾逻辑（您可在设置里按需更改）\n3.修复了平板端启动图排版错乱\n4.修复了双击跳转秒数\n5.（重大更新）直播页使用更佳\n6.提升了默认画质清晰度为更高\n7.自动跳过结尾与开头优化并默认关闭"
@@ -167,7 +167,7 @@
     }
   ],
   "misc": {
-    "shareUrl": "https://jiajian.lanzoub.com/b0eviitof",
+    "shareUrl": "https://yun.139.com/shareweb/#/w/i/2yrhN08DgGatk",
     "sharePwd": "",
     "moreSubtitle": "当前版本 · v{version}",
     "disclaimer": "Code by DeepSeek V4.1flash & jian.2026"
